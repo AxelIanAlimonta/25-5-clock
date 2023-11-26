@@ -1,0 +1,43 @@
+:root {
+  --color1: #cfb698;
+  --color2: #ff5d57;
+  --color3: #dd0b64;
+  --color4: #6f0550;
+  --color5: #401c2a;
+}
+
+.timer255 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.setersContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.Control {
+  display: flex;
+  gap: 13px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--color5);
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: var(--color3);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+p {
+  user-select: none;
+}

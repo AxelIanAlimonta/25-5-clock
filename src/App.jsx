@@ -7,6 +7,7 @@ import { TbReload } from "react-icons/tb";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { converter } from "./js/numberToTimeConverter.js";
+import beep from "./audio/boshigatounshauyo.mp3";
 
 function App() {
   const [breakTimer, setBreakTimer] = useState(300);
@@ -15,12 +16,15 @@ function App() {
   const [timerON, setTimerON] = useState(false);
   const [isSessionTime, setIsSessionTime] = useState(true);
 
+  console.log(beep);
   let interval = useRef();
+  let audio = useRef(new Audio(beep));
 
   useEffect(() => {
     if (timerON) {
       interval.current = setInterval(() => {
         setTimer((e) => {
+          if (e == 1) audio.current.play();
           if (e == 0) {
             setIsSessionTime(!isSessionTime);
             console.log(isSessionTime);
@@ -49,6 +53,7 @@ function App() {
   }
 
   function resetTimer() {
+    audio.play();
     pauseTimer();
     setTimer(sessionTimer);
   }

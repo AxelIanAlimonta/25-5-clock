@@ -24,14 +24,15 @@
   gap: 13px;
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--color5);
+  background-color: var(--color4);
+  border: 2px solid var(--color1);
 }
 
 .btn {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  color: var(--color3);
+  color: var(--color1);
 }
 
 .btn:hover {

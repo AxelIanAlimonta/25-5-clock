@@ -16,7 +16,6 @@ function App() {
   const [timerON, setTimerON] = useState(false);
   const [isSessionTime, setIsSessionTime] = useState(true);
 
-  console.log(beep);
   let interval = useRef();
   let audio = useRef(new Audio(beep));
 
@@ -53,7 +52,6 @@ function App() {
   }
 
   function resetTimer() {
-    audio.play();
     pauseTimer();
     setTimer(sessionTimer);
   }
